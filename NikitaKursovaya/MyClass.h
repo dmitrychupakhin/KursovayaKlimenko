@@ -586,6 +586,15 @@ public:
 		}
 		return nullptr;
 	}
+	std::vector<Connection*> get_connections_element() {
+		std::vector<Connection*>data;
+		for (int i = 0; i < elements.size(); i++) {
+			if (Connection* bObject = dynamic_cast<Connection*>(elements[i])) {
+				data.push_back(dynamic_cast<Connection*>(elements[i]));
+			}
+		}
+		return data;
+	}
 	Entitie* get_entitie_element(int x_position, int y_position) {
 		for (int i = 0; i < elements.size(); i++) {
 			if (dynamic_cast<Entitie*>(elements[i]) != nullptr && elements[i]->isPointInsideGraphicElement(x_position, y_position)) {

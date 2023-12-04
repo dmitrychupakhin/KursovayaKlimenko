@@ -1,15 +1,18 @@
 ﻿#pragma once
+#include <msclr/marshal_cppstd.h>
 #include "MyClass.h"
 #include <iostream>
 
 namespace NikitaKursovaya {
 
+	using namespace msclr::interop;
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Runtime::InteropServices;
 
 	/// <summary>
 	/// Сводка для MyForm
@@ -83,8 +86,9 @@ namespace NikitaKursovaya {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Button^ button25;
 	private: System::Windows::Forms::Button^ button24;
-	private: System::Windows::Forms::Button^ button23;
+
 	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Button^ button23;
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -122,6 +126,14 @@ namespace NikitaKursovaya {
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->tableLayoutPanel11 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->tableLayoutPanel12 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->tableLayoutPanel13 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->button25 = (gcnew System::Windows::Forms::Button());
+			this->button24 = (gcnew System::Windows::Forms::Button());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->tableLayoutPanel3 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->tableLayoutPanel5 = (gcnew System::Windows::Forms::TableLayoutPanel());
@@ -138,14 +150,6 @@ namespace NikitaKursovaya {
 			this->button13 = (gcnew System::Windows::Forms::Button());
 			this->button12 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->tableLayoutPanel11 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->tableLayoutPanel13 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->tableLayoutPanel12 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->button24 = (gcnew System::Windows::Forms::Button());
-			this->button25 = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button23 = (gcnew System::Windows::Forms::Button());
 			this->tableLayoutPanel1->SuspendLayout();
 			this->tableLayoutPanel2->SuspendLayout();
@@ -153,14 +157,14 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel8->SuspendLayout();
 			this->tableLayoutPanel7->SuspendLayout();
 			this->tableLayoutPanel6->SuspendLayout();
+			this->tableLayoutPanel11->SuspendLayout();
+			this->tableLayoutPanel12->SuspendLayout();
+			this->tableLayoutPanel13->SuspendLayout();
 			this->tableLayoutPanel3->SuspendLayout();
 			this->tableLayoutPanel5->SuspendLayout();
 			this->tableLayoutPanel9->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tableLayoutPanel10->SuspendLayout();
-			this->tableLayoutPanel11->SuspendLayout();
-			this->tableLayoutPanel13->SuspendLayout();
-			this->tableLayoutPanel12->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tableLayoutPanel1
@@ -197,9 +201,9 @@ namespace NikitaKursovaya {
 			// 
 			this->tableLayoutPanel2->ColumnCount = 2;
 			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				20)));
+				30)));
 			this->tableLayoutPanel2->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				80)));
+				70)));
 			this->tableLayoutPanel2->Controls->Add(this->tableLayoutPanel4, 1, 0);
 			this->tableLayoutPanel2->Controls->Add(this->tableLayoutPanel11, 0, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -225,12 +229,12 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel4->Controls->Add(this->tableLayoutPanel7, 1, 0);
 			this->tableLayoutPanel4->Controls->Add(this->tableLayoutPanel6, 0, 0);
 			this->tableLayoutPanel4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel4->Location = System::Drawing::Point(266, 0);
+			this->tableLayoutPanel4->Location = System::Drawing::Point(399, 0);
 			this->tableLayoutPanel4->Margin = System::Windows::Forms::Padding(0);
 			this->tableLayoutPanel4->Name = L"tableLayoutPanel4";
 			this->tableLayoutPanel4->RowCount = 1;
 			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
-			this->tableLayoutPanel4->Size = System::Drawing::Size(1064, 142);
+			this->tableLayoutPanel4->Size = System::Drawing::Size(931, 142);
 			this->tableLayoutPanel4->TabIndex = 1;
 			// 
 			// tableLayoutPanel8
@@ -253,13 +257,13 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel8->Controls->Add(this->button20, 0, 1);
 			this->tableLayoutPanel8->Controls->Add(this->button21, 0, 0);
 			this->tableLayoutPanel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel8->Location = System::Drawing::Point(712, 4);
+			this->tableLayoutPanel8->Location = System::Drawing::Point(624, 4);
 			this->tableLayoutPanel8->Name = L"tableLayoutPanel8";
 			this->tableLayoutPanel8->RowCount = 2;
 			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
-			this->tableLayoutPanel8->Size = System::Drawing::Size(348, 134);
+			this->tableLayoutPanel8->Size = System::Drawing::Size(303, 134);
 			this->tableLayoutPanel8->TabIndex = 2;
 			// 
 			// button22
@@ -271,10 +275,10 @@ namespace NikitaKursovaya {
 			this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button22->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button22->Location = System::Drawing::Point(90, 70);
+			this->button22->Location = System::Drawing::Point(78, 70);
 			this->button22->Name = L"button22";
 			this->button22->Padding = System::Windows::Forms::Padding(3);
-			this->button22->Size = System::Drawing::Size(81, 61);
+			this->button22->Size = System::Drawing::Size(69, 61);
 			this->button22->TabIndex = 9;
 			this->button22->Text = L"Text";
 			this->button22->UseVisualStyleBackColor = false;
@@ -288,10 +292,10 @@ namespace NikitaKursovaya {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(264, 3);
+			this->button1->Location = System::Drawing::Point(228, 3);
 			this->button1->Name = L"button1";
 			this->button1->Padding = System::Windows::Forms::Padding(3);
-			this->button1->Size = System::Drawing::Size(81, 61);
+			this->button1->Size = System::Drawing::Size(72, 61);
 			this->button1->TabIndex = 8;
 			this->button1->Text = L"Text";
 			this->button1->UseVisualStyleBackColor = false;
@@ -305,10 +309,10 @@ namespace NikitaKursovaya {
 			this->button16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button16->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button16->Location = System::Drawing::Point(177, 3);
+			this->button16->Location = System::Drawing::Point(153, 3);
 			this->button16->Name = L"button16";
 			this->button16->Padding = System::Windows::Forms::Padding(3);
-			this->button16->Size = System::Drawing::Size(81, 61);
+			this->button16->Size = System::Drawing::Size(69, 61);
 			this->button16->TabIndex = 7;
 			this->button16->Text = L"Text";
 			this->button16->UseVisualStyleBackColor = false;
@@ -322,10 +326,10 @@ namespace NikitaKursovaya {
 			this->button17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button17->Location = System::Drawing::Point(90, 3);
+			this->button17->Location = System::Drawing::Point(78, 3);
 			this->button17->Name = L"button17";
 			this->button17->Padding = System::Windows::Forms::Padding(3);
-			this->button17->Size = System::Drawing::Size(81, 61);
+			this->button17->Size = System::Drawing::Size(69, 61);
 			this->button17->TabIndex = 6;
 			this->button17->Text = L"Text";
 			this->button17->UseVisualStyleBackColor = false;
@@ -339,10 +343,10 @@ namespace NikitaKursovaya {
 			this->button18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button18->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button18->Location = System::Drawing::Point(177, 70);
+			this->button18->Location = System::Drawing::Point(153, 70);
 			this->button18->Name = L"button18";
 			this->button18->Padding = System::Windows::Forms::Padding(3);
-			this->button18->Size = System::Drawing::Size(81, 61);
+			this->button18->Size = System::Drawing::Size(69, 61);
 			this->button18->TabIndex = 5;
 			this->button18->Text = L"Text";
 			this->button18->UseVisualStyleBackColor = false;
@@ -356,10 +360,10 @@ namespace NikitaKursovaya {
 			this->button19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button19->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button19->Location = System::Drawing::Point(264, 70);
+			this->button19->Location = System::Drawing::Point(228, 70);
 			this->button19->Name = L"button19";
 			this->button19->Padding = System::Windows::Forms::Padding(3);
-			this->button19->Size = System::Drawing::Size(81, 61);
+			this->button19->Size = System::Drawing::Size(72, 61);
 			this->button19->TabIndex = 4;
 			this->button19->Text = L"Text";
 			this->button19->UseVisualStyleBackColor = false;
@@ -376,7 +380,7 @@ namespace NikitaKursovaya {
 			this->button20->Location = System::Drawing::Point(3, 70);
 			this->button20->Name = L"button20";
 			this->button20->Padding = System::Windows::Forms::Padding(3);
-			this->button20->Size = System::Drawing::Size(81, 61);
+			this->button20->Size = System::Drawing::Size(69, 61);
 			this->button20->TabIndex = 2;
 			this->button20->Text = L"Text";
 			this->button20->UseVisualStyleBackColor = false;
@@ -393,7 +397,7 @@ namespace NikitaKursovaya {
 			this->button21->Location = System::Drawing::Point(3, 3);
 			this->button21->Name = L"button21";
 			this->button21->Padding = System::Windows::Forms::Padding(3);
-			this->button21->Size = System::Drawing::Size(81, 61);
+			this->button21->Size = System::Drawing::Size(69, 61);
 			this->button21->TabIndex = 1;
 			this->button21->Text = L"Text";
 			this->button21->UseVisualStyleBackColor = false;
@@ -413,13 +417,13 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel7->Controls->Add(this->button11, 1, 0);
 			this->tableLayoutPanel7->Controls->Add(this->button15, 0, 0);
 			this->tableLayoutPanel7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel7->Location = System::Drawing::Point(358, 4);
+			this->tableLayoutPanel7->Location = System::Drawing::Point(314, 4);
 			this->tableLayoutPanel7->Name = L"tableLayoutPanel7";
 			this->tableLayoutPanel7->RowCount = 2;
 			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
-			this->tableLayoutPanel7->Size = System::Drawing::Size(347, 134);
+			this->tableLayoutPanel7->Size = System::Drawing::Size(303, 134);
 			this->tableLayoutPanel7->TabIndex = 1;
 			// 
 			// button10
@@ -431,10 +435,10 @@ namespace NikitaKursovaya {
 			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button10->Location = System::Drawing::Point(175, 3);
+			this->button10->Location = System::Drawing::Point(153, 3);
 			this->button10->Name = L"button10";
 			this->button10->Padding = System::Windows::Forms::Padding(3);
-			this->button10->Size = System::Drawing::Size(80, 61);
+			this->button10->Size = System::Drawing::Size(69, 61);
 			this->button10->TabIndex = 7;
 			this->button10->Text = L"—";
 			this->button10->UseVisualStyleBackColor = false;
@@ -449,10 +453,10 @@ namespace NikitaKursovaya {
 			this->button11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button11->Location = System::Drawing::Point(89, 3);
+			this->button11->Location = System::Drawing::Point(78, 3);
 			this->button11->Name = L"button11";
 			this->button11->Padding = System::Windows::Forms::Padding(3);
-			this->button11->Size = System::Drawing::Size(80, 61);
+			this->button11->Size = System::Drawing::Size(69, 61);
 			this->button11->TabIndex = 6;
 			this->button11->Text = L"↔";
 			this->button11->UseVisualStyleBackColor = false;
@@ -470,7 +474,7 @@ namespace NikitaKursovaya {
 			this->button15->Location = System::Drawing::Point(3, 3);
 			this->button15->Name = L"button15";
 			this->button15->Padding = System::Windows::Forms::Padding(3);
-			this->button15->Size = System::Drawing::Size(80, 61);
+			this->button15->Size = System::Drawing::Size(69, 61);
 			this->button15->TabIndex = 1;
 			this->button15->Text = L"→";
 			this->button15->UseVisualStyleBackColor = false;
@@ -501,7 +505,7 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
-			this->tableLayoutPanel6->Size = System::Drawing::Size(347, 134);
+			this->tableLayoutPanel6->Size = System::Drawing::Size(303, 134);
 			this->tableLayoutPanel6->TabIndex = 0;
 			// 
 			// button9
@@ -513,10 +517,10 @@ namespace NikitaKursovaya {
 			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button9->Location = System::Drawing::Point(261, 3);
+			this->button9->Location = System::Drawing::Point(228, 3);
 			this->button9->Name = L"button9";
 			this->button9->Padding = System::Windows::Forms::Padding(3);
-			this->button9->Size = System::Drawing::Size(83, 61);
+			this->button9->Size = System::Drawing::Size(72, 61);
 			this->button9->TabIndex = 8;
 			this->button9->Text = L"⬭";
 			this->button9->UseVisualStyleBackColor = false;
@@ -531,10 +535,10 @@ namespace NikitaKursovaya {
 			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button8->Location = System::Drawing::Point(175, 3);
+			this->button8->Location = System::Drawing::Point(153, 3);
 			this->button8->Name = L"button8";
 			this->button8->Padding = System::Windows::Forms::Padding(3);
-			this->button8->Size = System::Drawing::Size(80, 61);
+			this->button8->Size = System::Drawing::Size(69, 61);
 			this->button8->TabIndex = 7;
 			this->button8->Text = L"⬡";
 			this->button8->UseVisualStyleBackColor = false;
@@ -549,10 +553,10 @@ namespace NikitaKursovaya {
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button7->Location = System::Drawing::Point(89, 3);
+			this->button7->Location = System::Drawing::Point(78, 3);
 			this->button7->Name = L"button7";
 			this->button7->Padding = System::Windows::Forms::Padding(3);
-			this->button7->Size = System::Drawing::Size(80, 61);
+			this->button7->Size = System::Drawing::Size(69, 61);
 			this->button7->TabIndex = 6;
 			this->button7->Text = L"◊";
 			this->button7->UseVisualStyleBackColor = false;
@@ -570,7 +574,7 @@ namespace NikitaKursovaya {
 			this->button6->Location = System::Drawing::Point(3, 70);
 			this->button6->Name = L"button6";
 			this->button6->Padding = System::Windows::Forms::Padding(3);
-			this->button6->Size = System::Drawing::Size(80, 61);
+			this->button6->Size = System::Drawing::Size(69, 61);
 			this->button6->TabIndex = 5;
 			this->button6->Text = L"⬬";
 			this->button6->UseVisualStyleBackColor = false;
@@ -585,10 +589,10 @@ namespace NikitaKursovaya {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(175, 70);
+			this->button5->Location = System::Drawing::Point(153, 70);
 			this->button5->Name = L"button5";
 			this->button5->Padding = System::Windows::Forms::Padding(3);
-			this->button5->Size = System::Drawing::Size(80, 61);
+			this->button5->Size = System::Drawing::Size(69, 61);
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"▱";
 			this->button5->UseVisualStyleBackColor = false;
@@ -603,10 +607,10 @@ namespace NikitaKursovaya {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(89, 70);
+			this->button3->Location = System::Drawing::Point(78, 70);
 			this->button3->Name = L"button3";
 			this->button3->Padding = System::Windows::Forms::Padding(3);
-			this->button3->Size = System::Drawing::Size(80, 61);
+			this->button3->Size = System::Drawing::Size(69, 61);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"⏢";
 			this->button3->UseVisualStyleBackColor = false;
@@ -624,19 +628,151 @@ namespace NikitaKursovaya {
 			this->button2->Location = System::Drawing::Point(3, 3);
 			this->button2->Name = L"button2";
 			this->button2->Padding = System::Windows::Forms::Padding(3);
-			this->button2->Size = System::Drawing::Size(80, 61);
+			this->button2->Size = System::Drawing::Size(69, 61);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"▭";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
+			// tableLayoutPanel11
+			// 
+			this->tableLayoutPanel11->CellBorderStyle = System::Windows::Forms::TableLayoutPanelCellBorderStyle::Single;
+			this->tableLayoutPanel11->ColumnCount = 2;
+			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				80)));
+			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				20)));
+			this->tableLayoutPanel11->Controls->Add(this->button23, 0, 1);
+			this->tableLayoutPanel11->Controls->Add(this->tableLayoutPanel12, 0, 0);
+			this->tableLayoutPanel11->Controls->Add(this->tableLayoutPanel13, 0, 1);
+			this->tableLayoutPanel11->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel11->Location = System::Drawing::Point(0, 0);
+			this->tableLayoutPanel11->Margin = System::Windows::Forms::Padding(0);
+			this->tableLayoutPanel11->Name = L"tableLayoutPanel11";
+			this->tableLayoutPanel11->RowCount = 2;
+			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
+			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute,
+				20)));
+			this->tableLayoutPanel11->Size = System::Drawing::Size(399, 142);
+			this->tableLayoutPanel11->TabIndex = 2;
+			this->tableLayoutPanel11->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::tableLayoutPanel11_Paint);
+			// 
+			// tableLayoutPanel12
+			// 
+			this->tableLayoutPanel12->ColumnCount = 2;
+			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				20)));
+			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				80)));
+			this->tableLayoutPanel12->Controls->Add(this->label6, 0, 0);
+			this->tableLayoutPanel12->Controls->Add(this->textBox1, 1, 0);
+			this->tableLayoutPanel12->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel12->Location = System::Drawing::Point(4, 4);
+			this->tableLayoutPanel12->Name = L"tableLayoutPanel12";
+			this->tableLayoutPanel12->RowCount = 1;
+			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
+			this->tableLayoutPanel12->Size = System::Drawing::Size(310, 63);
+			this->tableLayoutPanel12->TabIndex = 2;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 7, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(3, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(56, 63);
+			this->label6->TabIndex = 1;
+			this->label6->Text = L"Текст";
+			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox1->Location = System::Drawing::Point(65, 3);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(242, 45);
+			this->textBox1->TabIndex = 2;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
+			// 
+			// tableLayoutPanel13
+			// 
+			this->tableLayoutPanel13->ColumnCount = 3;
+			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				20)));
+			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				40)));
+			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				40)));
+			this->tableLayoutPanel13->Controls->Add(this->button25, 0, 0);
+			this->tableLayoutPanel13->Controls->Add(this->button24, 0, 0);
+			this->tableLayoutPanel13->Controls->Add(this->label7, 0, 0);
+			this->tableLayoutPanel13->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->tableLayoutPanel13->Location = System::Drawing::Point(4, 74);
+			this->tableLayoutPanel13->Name = L"tableLayoutPanel13";
+			this->tableLayoutPanel13->RowCount = 1;
+			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
+			this->tableLayoutPanel13->Size = System::Drawing::Size(310, 64);
+			this->tableLayoutPanel13->TabIndex = 1;
+			// 
+			// button25
+			// 
+			this->button25->BackColor = System::Drawing::Color::White;
+			this->button25->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->button25->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(160)));
+			this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button25->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button25->Location = System::Drawing::Point(189, 3);
+			this->button25->Name = L"button25";
+			this->button25->Size = System::Drawing::Size(118, 58);
+			this->button25->TabIndex = 4;
+			this->button25->Text = L"-";
+			this->button25->UseVisualStyleBackColor = false;
+			this->button25->Click += gcnew System::EventHandler(this, &MyForm::button25_Click);
+			// 
+			// button24
+			// 
+			this->button24->BackColor = System::Drawing::Color::White;
+			this->button24->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->button24->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(160)));
+			this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button24->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button24->Location = System::Drawing::Point(65, 3);
+			this->button24->Name = L"button24";
+			this->button24->Size = System::Drawing::Size(118, 58);
+			this->button24->TabIndex = 3;
+			this->button24->Text = L"+";
+			this->button24->UseVisualStyleBackColor = false;
+			this->button24->Click += gcnew System::EventHandler(this, &MyForm::button24_Click);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 7, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(3, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(56, 64);
+			this->label7->TabIndex = 1;
+			this->label7->Text = L"Размер";
+			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// tableLayoutPanel3
 			// 
 			this->tableLayoutPanel3->ColumnCount = 2;
 			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				20)));
+				30)));
 			this->tableLayoutPanel3->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				80)));
+				70)));
 			this->tableLayoutPanel3->Controls->Add(this->label5, 0, 0);
 			this->tableLayoutPanel3->Controls->Add(this->tableLayoutPanel5, 1, 0);
 			this->tableLayoutPanel3->Dock = System::Windows::Forms::DockStyle::Fill;
@@ -644,21 +780,20 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel3->Margin = System::Windows::Forms::Padding(0);
 			this->tableLayoutPanel3->Name = L"tableLayoutPanel3";
 			this->tableLayoutPanel3->RowCount = 1;
-			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 99.99999F)));
+			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
 			this->tableLayoutPanel3->Size = System::Drawing::Size(1330, 47);
 			this->tableLayoutPanel3->TabIndex = 2;
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->label5->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->Location = System::Drawing::Point(0, 0);
 			this->label5->Margin = System::Windows::Forms::Padding(0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(266, 47);
+			this->label5->Size = System::Drawing::Size(399, 47);
 			this->label5->TabIndex = 3;
 			this->label5->Text = L"Текущий элемент";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -676,11 +811,11 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel5->Controls->Add(this->label2, 1, 0);
 			this->tableLayoutPanel5->Controls->Add(this->label1, 0, 0);
 			this->tableLayoutPanel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel5->Location = System::Drawing::Point(269, 3);
+			this->tableLayoutPanel5->Location = System::Drawing::Point(402, 3);
 			this->tableLayoutPanel5->Name = L"tableLayoutPanel5";
 			this->tableLayoutPanel5->RowCount = 1;
 			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
-			this->tableLayoutPanel5->Size = System::Drawing::Size(1058, 41);
+			this->tableLayoutPanel5->Size = System::Drawing::Size(925, 41);
 			this->tableLayoutPanel5->TabIndex = 2;
 			// 
 			// label3
@@ -689,9 +824,9 @@ namespace NikitaKursovaya {
 			this->label3->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(707, 0);
+			this->label3->Location = System::Drawing::Point(619, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(348, 41);
+			this->label3->Size = System::Drawing::Size(303, 41);
 			this->label3->TabIndex = 2;
 			this->label3->Text = L"Текст";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -702,9 +837,9 @@ namespace NikitaKursovaya {
 			this->label2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(355, 0);
+			this->label2->Location = System::Drawing::Point(311, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(346, 41);
+			this->label2->Size = System::Drawing::Size(302, 41);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Связи";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -717,7 +852,7 @@ namespace NikitaKursovaya {
 				static_cast<System::Byte>(204)));
 			this->label1->Location = System::Drawing::Point(3, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(346, 41);
+			this->label1->Size = System::Drawing::Size(302, 41);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Элементы";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -764,6 +899,7 @@ namespace NikitaKursovaya {
 			this->pictureBox1->Size = System::Drawing::Size(1310, 666);
 			this->pictureBox1->TabIndex = 2;
 			this->pictureBox1->TabStop = false;
+			this->pictureBox1->DoubleClick += gcnew System::EventHandler(this, &MyForm::pictureBox1_DoubleClick);
 			this->pictureBox1->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::pictureBox1_MouseDown);
 			this->pictureBox1->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::pictureBox1_MouseMove);
 			this->pictureBox1->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::pictureBox1_MouseUp);
@@ -878,150 +1014,22 @@ namespace NikitaKursovaya {
 			this->button4->Text = L"Открыть";
 			this->button4->UseVisualStyleBackColor = false;
 			// 
-			// tableLayoutPanel11
-			// 
-			this->tableLayoutPanel11->ColumnCount = 1;
-			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
-			this->tableLayoutPanel11->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
-			this->tableLayoutPanel11->Controls->Add(this->tableLayoutPanel12, 0, 0);
-			this->tableLayoutPanel11->Controls->Add(this->tableLayoutPanel13, 0, 1);
-			this->tableLayoutPanel11->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel11->Location = System::Drawing::Point(3, 3);
-			this->tableLayoutPanel11->Name = L"tableLayoutPanel11";
-			this->tableLayoutPanel11->RowCount = 2;
-			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel11->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel11->Size = System::Drawing::Size(260, 136);
-			this->tableLayoutPanel11->TabIndex = 2;
-			// 
-			// tableLayoutPanel13
-			// 
-			this->tableLayoutPanel13->ColumnCount = 3;
-			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				26.31579F)));
-			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				36.84211F)));
-			this->tableLayoutPanel13->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				36.84211F)));
-			this->tableLayoutPanel13->Controls->Add(this->button25, 0, 0);
-			this->tableLayoutPanel13->Controls->Add(this->button24, 0, 0);
-			this->tableLayoutPanel13->Controls->Add(this->label7, 0, 0);
-			this->tableLayoutPanel13->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel13->Location = System::Drawing::Point(3, 71);
-			this->tableLayoutPanel13->Name = L"tableLayoutPanel13";
-			this->tableLayoutPanel13->RowCount = 1;
-			this->tableLayoutPanel13->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
-			this->tableLayoutPanel13->Size = System::Drawing::Size(254, 62);
-			this->tableLayoutPanel13->TabIndex = 1;
-			// 
-			// tableLayoutPanel12
-			// 
-			this->tableLayoutPanel12->ColumnCount = 3;
-			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				25)));
-			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
-			this->tableLayoutPanel12->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				25)));
-			this->tableLayoutPanel12->Controls->Add(this->button23, 2, 0);
-			this->tableLayoutPanel12->Controls->Add(this->label6, 0, 0);
-			this->tableLayoutPanel12->Controls->Add(this->textBox1, 1, 0);
-			this->tableLayoutPanel12->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel12->Location = System::Drawing::Point(3, 3);
-			this->tableLayoutPanel12->Name = L"tableLayoutPanel12";
-			this->tableLayoutPanel12->RowCount = 1;
-			this->tableLayoutPanel12->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
-			this->tableLayoutPanel12->Size = System::Drawing::Size(254, 62);
-			this->tableLayoutPanel12->TabIndex = 2;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 7, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(3, 0);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(57, 62);
-			this->label6->TabIndex = 1;
-			this->label6->Text = L"Текст";
-			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 7, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(3, 0);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(60, 62);
-			this->label7->TabIndex = 1;
-			this->label7->Text = L"Размер";
-			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// button24
-			// 
-			this->button24->BackColor = System::Drawing::Color::White;
-			this->button24->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->button24->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(160)),
-				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(160)));
-			this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button24->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button24->Location = System::Drawing::Point(66, 0);
-			this->button24->Margin = System::Windows::Forms::Padding(0);
-			this->button24->Name = L"button24";
-			this->button24->Size = System::Drawing::Size(93, 62);
-			this->button24->TabIndex = 3;
-			this->button24->Text = L"+";
-			this->button24->UseVisualStyleBackColor = false;
-			// 
-			// button25
-			// 
-			this->button25->BackColor = System::Drawing::Color::White;
-			this->button25->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->button25->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(160)),
-				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(160)));
-			this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button25->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button25->Location = System::Drawing::Point(159, 0);
-			this->button25->Margin = System::Windows::Forms::Padding(0);
-			this->button25->Name = L"button25";
-			this->button25->Size = System::Drawing::Size(95, 62);
-			this->button25->TabIndex = 4;
-			this->button25->Text = L"-";
-			this->button25->UseVisualStyleBackColor = false;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(66, 3);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(121, 45);
-			this->textBox1->TabIndex = 2;
-			// 
 			// button23
 			// 
-			this->button23->BackColor = System::Drawing::Color::White;
+			this->button23->BackColor = System::Drawing::Color::MistyRose;
 			this->button23->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->button23->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(160)),
 				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(160)));
 			this->button23->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button23->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 5, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button23->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 6, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button23->Location = System::Drawing::Point(190, 0);
-			this->button23->Margin = System::Windows::Forms::Padding(0);
+			this->button23->Location = System::Drawing::Point(321, 74);
 			this->button23->Name = L"button23";
-			this->button23->Size = System::Drawing::Size(64, 62);
-			this->button23->TabIndex = 3;
-			this->button23->Text = L"Сохранить";
+			this->button23->Size = System::Drawing::Size(74, 64);
+			this->button23->TabIndex = 5;
+			this->button23->Text = L"Удалить";
 			this->button23->UseVisualStyleBackColor = false;
+			this->button23->Click += gcnew System::EventHandler(this, &MyForm::button23_Click);
 			// 
 			// MyForm
 			// 
@@ -1040,6 +1048,11 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel8->ResumeLayout(false);
 			this->tableLayoutPanel7->ResumeLayout(false);
 			this->tableLayoutPanel6->ResumeLayout(false);
+			this->tableLayoutPanel11->ResumeLayout(false);
+			this->tableLayoutPanel12->ResumeLayout(false);
+			this->tableLayoutPanel12->PerformLayout();
+			this->tableLayoutPanel13->ResumeLayout(false);
+			this->tableLayoutPanel13->PerformLayout();
 			this->tableLayoutPanel3->ResumeLayout(false);
 			this->tableLayoutPanel3->PerformLayout();
 			this->tableLayoutPanel5->ResumeLayout(false);
@@ -1047,11 +1060,6 @@ namespace NikitaKursovaya {
 			this->tableLayoutPanel9->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->tableLayoutPanel10->ResumeLayout(false);
-			this->tableLayoutPanel11->ResumeLayout(false);
-			this->tableLayoutPanel13->ResumeLayout(false);
-			this->tableLayoutPanel13->PerformLayout();
-			this->tableLayoutPanel12->ResumeLayout(false);
-			this->tableLayoutPanel12->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -1099,15 +1107,23 @@ namespace NikitaKursovaya {
 						bObject->entitie1 = nullptr;
 					}
 				}
+				else {
+					tableLayoutPanel11->BackColor = Color::LightGreen;
+					Entitie* sObject = dynamic_cast<Entitie*>(currentGraphicElement);
+					textBox1->Text = gcnew String(sObject->title.c_str());
+				}
 				isMousePressed = true;
 			}
-			
+			else{
+				tableLayoutPanel11->BackColor = Color::White;
+				textBox1->Text = "";
+			}
 		}
 	}
 	private: System::Void pictureBox1_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (isMousePressed) {
 			if (currentGraphicElement != nullptr){
-				
+
 				if (Connection* bObject = dynamic_cast<Connection*>(currentGraphicElement)) {
 					if (isStart) {
 						currentGraphicElement->x_position = e->X;
@@ -1231,82 +1247,129 @@ namespace NikitaKursovaya {
 	private: System::Void Form1_Activated(System::Object^ sender, System::EventArgs^ e) {
 		pictureBox1->Invalidate();
 	}
-private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
-	ConnectionStyle1* connection = new ConnectionStyle1();
-	connection->x_position = 0;
-	connection->y_position = 0;
-	connection->x_position2 = 100;
-	connection->y_position2 = 100;
-	drawingManager->add_element(connection);
-	drawingManager->draw_elements(pictureBox1);
-}
-	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-		Rhombus* rhombus = new Rhombus();
-		rhombus->x_position = 0;
-		rhombus->y_position = 0;
-		rhombus->x_position2 = 150;
-		rhombus->y_position2 = 50;
-		rhombus->color = "black";
-		rhombus->title = "Это TITLE?";
-		drawingManager->add_element(rhombus);
+	private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+		ConnectionStyle1* connection = new ConnectionStyle1();
+		connection->x_position = 0;
+		connection->y_position = 0;
+		connection->x_position2 = 100;
+		connection->y_position2 = 100;
+		drawingManager->add_element(connection);
 		drawingManager->draw_elements(pictureBox1);
 	}
-private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-	Hexagon* hexagon = new Hexagon();
-	hexagon->x_position = 0;
-	hexagon->y_position = 0;
-	hexagon->x_position2 = 150;
-	hexagon->y_position2 = 150;
-	hexagon->color = "black";
-	hexagon->title = "Это TITLE?";
-	drawingManager->add_element(hexagon);
-	drawingManager->draw_elements(pictureBox1);
-}
-private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
-	Oval* oval = new Oval();
-	oval->x_position = 0;
-	oval->y_position = 0;
-	oval->x_position2 = 150;
-	oval->y_position2 = 100;
-	oval->color = "black";
-	oval->title = "Это TITLE?";
-	drawingManager->add_element(oval);
-	drawingManager->draw_elements(pictureBox1);
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	Key* key = new Key();
-	key->x_position = 0;
-	key->y_position = 0;
-	key->x_position2 = 150;
-	key->y_position2 = 100;
-	key->color = "black";
-	key->title = "Это TITLE?";
-	drawingManager->add_element(key);
-	drawingManager->draw_elements(pictureBox1);
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	Trapezoid* trapezoid = new Trapezoid();
-	trapezoid->x_position = 0;
-	trapezoid->y_position = 0;
-	trapezoid->x_position2 = 150;
-	trapezoid->y_position2 = 100;
-	trapezoid->color = "black";
-	trapezoid->title = "Это TITLE?";
-	drawingManager->add_element(trapezoid);
-	drawingManager->draw_elements(pictureBox1);
-}
+		private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+			Rhombus* rhombus = new Rhombus();
+			rhombus->x_position = 0;
+			rhombus->y_position = 0;
+			rhombus->x_position2 = 150;
+			rhombus->y_position2 = 50;
+			rhombus->color = "black";
+			rhombus->title = "Это TITLE?";
+			drawingManager->add_element(rhombus);
+			drawingManager->draw_elements(pictureBox1);
+		}
+	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+		Hexagon* hexagon = new Hexagon();
+		hexagon->x_position = 0;
+		hexagon->y_position = 0;
+		hexagon->x_position2 = 150;
+		hexagon->y_position2 = 150;
+		hexagon->color = "black";
+		hexagon->title = "Это TITLE?";
+		drawingManager->add_element(hexagon);
+		drawingManager->draw_elements(pictureBox1);
+	}
+	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+		Oval* oval = new Oval();
+		oval->x_position = 0;
+		oval->y_position = 0;
+		oval->x_position2 = 150;
+		oval->y_position2 = 100;
+		oval->color = "black";
+		oval->title = "Это TITLE?";
+		drawingManager->add_element(oval);
+		drawingManager->draw_elements(pictureBox1);
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		Key* key = new Key();
+		key->x_position = 0;
+		key->y_position = 0;
+		key->x_position2 = 150;
+		key->y_position2 = 100;
+		key->color = "black";
+		key->title = "Это TITLE?";
+		drawingManager->add_element(key);
+		drawingManager->draw_elements(pictureBox1);
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		Trapezoid* trapezoid = new Trapezoid();
+		trapezoid->x_position = 0;
+		trapezoid->y_position = 0;
+		trapezoid->x_position2 = 150;
+		trapezoid->y_position2 = 100;
+		trapezoid->color = "black";
+		trapezoid->title = "Это TITLE?";
+		drawingManager->add_element(trapezoid);
+		drawingManager->draw_elements(pictureBox1);
+	}
 
 
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	Parallelogram* parallelogram = new Parallelogram();
-	parallelogram->x_position = 0;
-	parallelogram->y_position = 0;
-	parallelogram->x_position2 = 150;
-	parallelogram->y_position2 = 100;
-	parallelogram->color = "black";
-	parallelogram->title = "Это TITLE?";
-	drawingManager->add_element(parallelogram);
-	drawingManager->draw_elements(pictureBox1);
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		Parallelogram* parallelogram = new Parallelogram();
+		parallelogram->x_position = 0;
+		parallelogram->y_position = 0;
+		parallelogram->x_position2 = 150;
+		parallelogram->y_position2 = 100;
+		parallelogram->color = "black";
+		parallelogram->title = "Это TITLE?";
+		drawingManager->add_element(parallelogram);
+		drawingManager->draw_elements(pictureBox1);
+	}
+
+	private: System::Void pictureBox1_DoubleClick(System::Object^ sender, System::EventArgs^ e) {
+		// Создайте новую форму (всплывающее окно)
+		
+	}
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (currentGraphicElement != nullptr) {
+		Entitie* bObject = dynamic_cast<Entitie*>(currentGraphicElement);
+		marshal_context context;
+		bObject->title = context.marshal_as<std::string>(textBox1->Text);
+		drawingManager->draw_elements(pictureBox1);
+	}
+}
+private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (currentGraphicElement != nullptr) {
+		currentGraphicElement->x_position2 *= 1.1;
+		currentGraphicElement->y_position2 *= 1.1;
+		drawingManager->draw_elements(pictureBox1);
+	}
+}
+private: System::Void button25_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (currentGraphicElement != nullptr) {
+		currentGraphicElement->x_position2 /= 1.1;
+		currentGraphicElement->y_position2 /= 1.1;
+		drawingManager->draw_elements(pictureBox1);
+	}
+}
+private: System::Void tableLayoutPanel11_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (currentGraphicElement != nullptr) {
+		Entitie* bObject = dynamic_cast<Entitie*>(currentGraphicElement);
+		std::vector<Connection*>connections = drawingManager->get_connections_element();
+		for (int i = 0; i < connections.size(); i++) {
+			if (connections[i]->entitie1 == bObject) {
+				connections[i]->entitie1 = nullptr;
+			}
+			if (connections[i]->entitie2 == bObject) {
+				connections[i]->entitie2 = nullptr;
+			}
+		}
+		tableLayoutPanel11->BackColor = Color::White;
+		textBox1->Text = "";
+		drawingManager->remove_element(currentGraphicElement);
+		drawingManager->draw_elements(pictureBox1);
+	}
 }
 };
 }
