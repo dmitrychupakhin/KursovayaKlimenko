@@ -1,0 +1,7 @@
+D:\Programming\Course_Work\Course_Work\x64\Debug\Course_Work.vcxproj.AssemblyReference.cache
+D:\Programming\Course_Work\Course_Work\x64\Debug\CourseWork.MyForm.resources
+D:\Programming\Course_Work\Course_Work\x64\Debug\Course_Work.vcxproj.GenerateResource.cache
+C:\Users\Dima\Desktop\Course_Work\Course_Work\x64\Debug\Course_Work.vcxproj.AssemblyReference.cache
+C:\Users\Dima\Desktop\Course_Work\Course_Work\x64\Debug\Course_Work.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\Dima\Desktop\Course_Work\Course_Work\x64\Debug\CourseWork.MyForm.resources
+C:\Users\Dima\Desktop\Course_Work\Course_Work\x64\Debug\Course_Work.vcxproj.GenerateResource.cache
